@@ -7,7 +7,7 @@ const productsController = require('../controllers/productsController');
 router.get('/', productsController.getAll);
 
 /* Rutas parametrizada de detalle de producto */
-router.get('/detalle/:id/color?', productsController.getOne); //Color es opcional.
+router.get('/detalle/:id', productsController.getOne); //Color es opcional.
 
 
 module.exports = router;
