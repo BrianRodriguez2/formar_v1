@@ -22,11 +22,15 @@ ${element.discount}
 
         let product = getProducts.find((product) => product.id === idProducto)
         
-        res.write("Detalle de producto\n");
-        res.write(`Nombre: ${product.name}\n`);
-        res.write(`Precio: ${product.price}\n`);
-        res.write(`Descripción: ${product.description}\n`);
-        res.write(`Descuento: ${product.discount}\n`);
+        if(product){
+            res.write("Detalle de producto\n");
+            res.write(`Nombre: ${product.name}\n`);
+            res.write(`Precio: ${product.price}\n`);
+            res.write(`Descripción: ${product.description}\n`);
+            res.write(`Descuento: ${product.discount}\n`);
+        } else{
+            res.write("Producto no existe")
+        }
         res.end()
     }
 };
