@@ -5,10 +5,7 @@ module.exports = {
         res.render('index', {
             titulo: "Homepage",
             products_title: "Productos",
-            imagen: "desayuno.jpg",
-            nombre: "Desayuno",
-            precio: 3000,
-            descripcion: "Lorem ipsum dolor sit amet consectetur." 
+            productos: getProducts
          }) 
     },
     contact: (req, res) => res.send("CONTACTO DESDE EL CONTROLLER")
